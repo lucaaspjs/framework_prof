@@ -1,0 +1,14 @@
+// remove o 'espaço' ao digitar no input text
+onkeyup="this.value=this.value.replace(/[' ']/g,'')"
+
+// exemplo completo
+<input onkeyup="this.value=this.value.replace(/[' ']/g,'')" type="text" name="login" />
+
+// exemplo removendo outros caracteres como acentos
+<input onkeyup="this.value=this.value.replace(/[' 'çÇáÁàÀéèÉÈíìÍÌóòÓÒúùÚÙñÑ~@&]/g,'')" type="text" name="login" />
+
+// Permite apenas alfabeto maiúscula e minuscula de A a Z
+<input type="text" onkeyup="value=value.replace(/[^\a-\z\A-\Z]/g,'')" />
+
+// Segunda opção
+<input type="text" onkeyup="value=value.replace(/[^a-zA-Z]/g,'')" /> 
